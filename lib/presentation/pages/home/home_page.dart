@@ -25,6 +25,8 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
+    Size size = MediaQuery.of(context).size;
+    print("-------Home Rebuild-------");
     return Scaffold(
       appBar: AppBar(
         title: Align(
@@ -57,7 +59,7 @@ class _HomePageState extends State<HomePage> {
             MenuWidget(),
             PopularFilter(),
             SizedBox(
-              height: 300,
+              height: size.height * .45,
               child: ListView.separated(
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (context, int index) {

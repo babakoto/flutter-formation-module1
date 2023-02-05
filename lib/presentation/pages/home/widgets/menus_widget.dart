@@ -13,6 +13,8 @@ class _MenuWidgetState extends State<MenuWidget> {
   String category = menus.first;
   @override
   Widget build(BuildContext context) {
+    print("-------Menu Rebuild-------");
+
     return SizedBox(
       height: 50,
       child: ListView.separated(
